@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  height: 50vh;
+  background: powderblue;
+}
+
+hr {
+  background: black;
+  height: 3.5px;
+  width: 30%;
+  text-align: center;
+  border: 0;
+}
