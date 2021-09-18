@@ -10,7 +10,7 @@ body {
 font-family: 'Open Sans', sans-serif;
 }
 
-.main {
+.main { /* section */
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -27,10 +27,20 @@ width: 100%;
 height: 100%;
 }
 
+@media screen and (max-width: 1350px) {
+.bg-img {
+  width: auto;
+}
+}
+
 h1 {
   text-align: center;
   padding: 0;
   font-size: 2.3rem;
+}
+
+h2 {
+  text-align: center;
 }
 hr {
   background: black;
@@ -48,21 +58,88 @@ hr {
 }
 
 .flex-1 {
+
 }
 
 .flex-2 {
   position: relative;
   top: 0;
   left: 0;
-  padding: 50px;
+  padding: 75px;
 }
 
 .punk {
   background: rgba(0,0,0,0.5);
   border-radius: 100%;
+  border: 2px solid red;
+  transition: 0.4s;
+  margin-left: 13px;
   }
 
-.qui {
-  text-align: center;
+.punk:hover {
+    background: rgba(0,0,0,1);
+    transform: rotate(-4deg);
+  }
+
+h2 {
+  margin: 40px 0 -10px;
+  font-size: 2rem;
+}
+  .nom {
+    font-size: 3rem;
+  }
+
+  .div-hr {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+footer {
+  background: ;
+  height: 250px;
+  width: 800px;
+  text-align: right;
+  margin: auto;
+  margin-top: 60px;
+
 }
 
+.footer-a {
+  position: relative;
+  text-decoration: none;
+  font-size: 2rem;
+  width: 33%;
+  color: red;
+  transition: 0.3s;
+}
+
+.footer-a:nth-child(1) {
+  margin-right: 100px;
+}
+
+.footer-a:nth-child(3) {
+  margin-left: 100px;
+}
+
+.footer-a:before {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background: red;
+  height: 3px;
+  content: "";
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+
+}
+
+.footer-a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
