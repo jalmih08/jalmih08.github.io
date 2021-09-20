@@ -144,3 +144,9 @@ margin-top: -60px;
   transform-origin: left;
 }
 
+/* COMMENCE DU POEME */
+
+#poeme {
+  font-family: 'Waiting for the Sunrise', cursive;
+}
+
