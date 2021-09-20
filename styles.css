@@ -36,7 +36,7 @@ height: 100%;
 h1 {
   text-align: center;
   padding: 0;
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -73,7 +73,9 @@ hr {
   border-radius: 100%;
   border: 2px solid red;
   transition: 0.4s;
-  margin-left: 13px;
+  margin-left: 26px;
+  margin-top: -20px;
+  width: 180px;
   }
 
 .punk:hover {
@@ -85,8 +87,8 @@ h2 {
   margin: 40px 0 -10px;
   font-size: 2rem;
 }
-  .nom {
-    font-size: 3rem;
+.nom {
+    font-size: 2.5rem;
   }
 
   .div-hr {
@@ -95,34 +97,32 @@ h2 {
 
   p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.18rem;
   }
 
 footer {
   background: ;
   height: 250px;
   width: 800px;
-  text-align: right;
+  text-align: center;
   margin: auto;
-  margin-top: 60px;
-
+margin-top: -50px;
 }
 
 .footer-a {
   position: relative;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 33%;
   color: red;
   transition: 0.3s;
 }
 
-.footer-a:nth-child(1) {
-  margin-right: 100px;
-}
 
-.footer-a:nth-child(3) {
+.footer-a:nth-child(2) {
   margin-left: 100px;
+  margin-right: 100px;
+
 }
 
 .footer-a:before {
@@ -143,3 +143,4 @@ footer {
   transform: scaleX(1);
   transform-origin: left;
 }
+
