@@ -19,6 +19,33 @@
     height: 240vh;
     overflow-y: visible;
     text-align: center;
+
+  }
+
+  .clip-path {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16%;
+    height: 16%;
+    background: #0096FF;
+    clip-path: circle(50% at 0 0);
+  }
+
+  .clip-path h1 {
+    font-size: 65px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+  }
+
+  @media screen and (max-width: 1800px) {
+    .clip-path h1 {
+      font-size: 45px;
+    }
   }
 
   h1 {
@@ -58,8 +85,6 @@
     transform: scale(1.2);
   }
 
-
-
 </style>
 
 
@@ -68,31 +93,33 @@
 
 
 <body>
+  <div class="clip-path"><h1>✈️</h1></div>
   <h1>Le voyage parfait</h1>
   <div class="section">
 
 
     <div class="scenes">
-      <p>Je verrais des scènes comme...</p>
+      <p>Je verrais des <b>scènes</b> comme...</p>
       <ul>
-        <li><span>Des gratte-ciels</span></li>
-        <li><span>Des plages</span></li>
-        <li><span>La ville illuminée</span></li>
+        <li><span><i>Des gratte-ciels</i></span></li>
+        <li><span><i>Des plages</i></span></li>
+        <li><span><em>La ville illuminée</em></span></li>
       </ul>
 
       <img class="dubai" src="images/burj.jpg" alt="Burj Khalifa">
       <img class="dubai" src="images/plage.jpg" alt="Plage">
       <img class="dubai" src="images/lumiere.jpg" alt="Dubai durant la nuit">
+
     </div>
 
 
 
     <div class="animaux">
-      <p>Et des animaux comme...</p>
+      <p>Et des <b>animaux</b> comme...</p>
       <ul>
-        <li><span>Des flamants</span></li>
-        <li><span>Des poissons</span></li>
-        <li><span>La ville illuminée</span></li>
+        <li><span><em>Des flamants</em></span></li>
+        <li><span><em>Des poissons</em></span></li>
+        <li><span><i>La ville illuminée</i></span></li>
       </ul>
 
       <img class="dubai" src="images/flamant.jpg" alt="Flamant">
@@ -101,20 +128,17 @@
     </div>
 
     <div class="nourriture">
-      <p>Et je mangerais de la nourriture comme...</p>
+      <p>Et je mangerais de la <strong>nourriture</strong> comme...</p>
       <ul>
-        <li><span>Du samoussa</span></li>
-        <li><span>Le chebab</span></li>
-        <li><span>Ghuzi</span></li>
+        <li><span><i>Du samoussa</i></span></li>
+        <li><span><em>Le chebab</em></span></li>
+        <li><span><i>Ghuzi</i></span></li>
       </ul>
 
       <img class="dubai" src="images/samoussa.jpg" alt="Samoussa">
       <img class="dubai" src="images/chebab.jpg" alt="Chebab">
       <img class="dubai" src="images/ghuzi.jpg" alt="Ghuzi">
     </div>
-
-
-
 
 
   </div>
