@@ -34,12 +34,24 @@
 
   .clip-path h1 {
     font-size: 65px;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
     position: absolute;
     margin: 0;
     padding: 0;
     transition: 0.4s;
+    animation: plane 1.3s;
+  }
+
+  @keyframes plane {
+    0% {
+      left: -100px;
+      top: 100px;
+    }
+    100% {
+      left: 0;
+      top: 0;
+    }
   }
 
   @media screen and (max-width: 1800px) {
@@ -94,7 +106,7 @@
 
 <body>
   <div class="clip-path"><h1>✈️</h1></div>
-  <h1>Le voyage parfait</h1>
+  <h1>Un voyage parfait</h1>
   <div class="section">
 
 
