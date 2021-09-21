@@ -1,0 +1,150 @@
+body {
+  height: 100vh;
+  width: 100vh;
+  background: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: black;
+font-family: 'Open Sans', sans-serif;
+}
+
+.main { /* section */
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-img {
+opacity: 0.7;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+@media screen and (max-width: 1350px) {
+.bg-img {
+  width: auto;
+}
+}
+
+h1 {
+  text-align: center;
+  padding: 0;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+
+hr {
+  background: black;
+  height: 3.5px;
+  width: 30%;
+  text-align: center;
+  border: 0;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flex-1 {
+
+}
+
+.flex-2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 75px;
+}
+
+.punk {
+  background: rgba(0,0,0,0.5);
+  border-radius: 100%;
+  border: 2px solid red;
+  transition: 0.4s;
+  margin-left: 22px;
+  margin-top: -50px;
+  width: 180px;
+  }
+
+.punk:hover {
+    background: rgba(0,0,0,1);
+    transform: rotate(-4deg);
+  }
+
+h2 {
+  margin: 20px 0 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.nom {
+    font-size: 2.5rem;
+  }
+
+  .div-hr {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.18rem;
+  }
+
+footer {
+  background: ;
+  height: 250px;
+  width: 800px;
+  text-align: center;
+  margin: auto;
+margin-top: -60px;
+}
+
+.footer-a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.7rem;
+  width: 33%;
+  color: red;
+  transition: 0.3s;
+}
+
+
+.footer-a:nth-child(2) {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.footer-a:before {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background: red;
+  height: 3px;
+  content: "";
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: right;
+
+}
+
+.footer-a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* COMMENCE DU POEME */
+
+#poeme {
+  font-family: 'Waiting for the Sunrise', cursive;
+}
