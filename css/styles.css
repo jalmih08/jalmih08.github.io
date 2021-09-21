@@ -19,6 +19,26 @@ font-family: 'Open Sans', sans-serif;
   top: 0;
   left: 0;
 }
+/* la barre de défilement sur les pages qui ont assez de contenu */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border: 13px solid #4effa5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(35deg, rgba(255, 0, 0, 1) 0%, rgba(65, 98, 255, 1) 30%, rgba(67, 180, 227, 1) 51%, rgba(255, 0, 167, 1) 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 0, 167);
+  background: linear-gradient(35deg, rgba(67, 180, 227, 1) 0%, rgba(255, 0, 0, 1) 30%, rgba(255, 0, 167, 1) 50%, rgba(65, 98, 255, 1) 100%);
+  border-radius: 10px;
+}
 
 .bg-img {
 opacity: 0.7;
@@ -141,10 +161,4 @@ margin-top: -60px;
 .footer-a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-/* COMMENCE DU POEME */
-
-#poeme {
-  font-family: 'Waiting for the Sunrise', cursive;
 }
