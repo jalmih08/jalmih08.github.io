@@ -11,10 +11,11 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   color: black;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.main { /* section */
+.main {
+  /* section */
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -23,6 +24,7 @@ font-family: 'Open Sans', sans-serif;
   top: 0;
   left: 0;
 }
+
 /* la barre de défilement sur les pages qui ont assez de contenu */
 ::-webkit-scrollbar {
   width: 15px;
@@ -45,16 +47,16 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .bg-img {
-opacity: 0.7;
-position: absolute;
-width: 100%;
-height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1350px) {
-.bg-img {
-  width: auto;
-}
+  .bg-img {
+    width: auto;
+  }
 }
 
 .flex-1 h1 {
@@ -63,7 +65,6 @@ height: 100%;
   font-size: 2rem;
   margin-top: 20px;
 }
-
 
 hr {
   background: black;
@@ -77,9 +78,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-
 
 .flex-2 {
   position: relative;
@@ -89,37 +88,38 @@ hr {
 }
 
 .punk {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 100%;
   border: 2px solid red;
   transition: 0.4s;
   margin-left: 22px;
   margin-top: -50px;
   width: 180px;
-  }
+}
 
 .punk:hover {
-    background: rgba(0,0,0,1);
-    transform: rotate(-4deg);
-  }
+  background: rgba(0, 0, 0, 1);
+  transform: rotate(-4deg);
+}
 
 .flex-2 h2 {
   margin: 20px 0 0;
   font-size: 2rem;
   text-align: center;
 }
+
 .nom {
-    font-size: 2.5rem;
-  }
+  font-size: 2.5rem;
+}
 
-  .div-hr {
-    width: 100%;
-  }
+.div-hr {
+  width: 100%;
+}
 
-  p {
-    text-align: center;
-    font-size: 1.18rem;
-  }
+p {
+  text-align: center;
+  font-size: 1.18rem;
+}
 
 footer {
   background: ;
@@ -127,7 +127,7 @@ footer {
   width: 800px;
   text-align: center;
   margin: auto;
-margin-top: -60px;
+  margin-top: -60px;
 }
 
 .footer-a {
@@ -138,7 +138,6 @@ margin-top: -60px;
   color: red;
   transition: 0.3s;
 }
-
 
 .footer-a:nth-child(2) {
   margin-left: 100px;
@@ -156,10 +155,22 @@ margin-top: -60px;
   transform: scaleX(0);
   transition: transform 0.3s;
   transform-origin: right;
-
 }
 
 .footer-a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.footer-arrow {
+  width: 4.6vw;
+  position: absolute;
+  left: 15px;
+  color: black;
+  transition: 0.4s;
+}
+
+.footer-arrow:hover {
+  color: #0ad;
+  transform: scale(1.3) rotate(360deg);
 }
