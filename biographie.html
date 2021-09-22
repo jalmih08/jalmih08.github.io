@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ma biographie</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    overflow-y: visible;
+    height: 265vh;
+  }
+
+  nav {
+    background: #343a40;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 71px;
+    position: fixed;
+    z-index: 5;
+  }
+
+  .nom {
+    position: absolute;
+    left: 40px;
+    top: -10px;
+    color: white;
+    font-size: 1.8rem;
+    position: fixed;
+    z-index: 6;
+  }
+
+  .nav-ul {
+    position: absolute;
+    right: 0;
+    font-size: 19px;
+  }
+
+  nav ul {
+    margin-right: 60px;
+  }
+
+  .nav-ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 30px;
+    transition: 0.35s;
+  }
+
+  .nav-ul li:hover {
+    text-decoration: underline;
+  }
+
+  .nav-ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #moi,
+  #liens,
+  #connaissances {
+    width: 100vw;
+    height: 95vh;
+    margin-top: -70px;
+
+  }
+
+  #fake-moi,
+  #fake-connaissances,
+  #fake-liens {
+    position: relative;
+    bottom: 70px;
+    height: 70px;
+    z-index: -1;
+  }
+
+  #moi {
+    background: #2fcfff;
+    margin-top: 0px;
+  }
+
+  #connaissances {
+    background: #90ee90;
+    background: #2fcfff;
+    height: 70vh;
+  }
+
+  #liens {
+    background: lightblue;
+  }
+
+  .row {
+    width: 55%;
+    height: 300px;
+    position: absolute;
+    margin: 30px auto 0;
+    left: 0;
+    transform: translateX(45%);
+    /* border: 1px solid black; */
+  }
+
+  .bio-punk {
+    background: rgba(0, 0, 0, 0.5);
+    /* border-radius: 100%; */
+    border: 5px solid red;
+    border-color: red orange green purple;
+    transition: 0.4s;
+    width: 180px;
+    margin: 30px 50px 0 0;
+    float: left;
+  }
+
+  .bio-punk:hover {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  .amis {
+    position: absolute;
+    width: 550px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .row p,
+  .row h2 {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  /* Partie des liens préférés */
+
+  .liens-h2,
+  .connaissances-h2 {
+    position: absolute;
+    margin: 30px auto 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.9rem;
+  }
+
+
+  .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 83%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .card {
+    background: white;
+    flex: 1;
+    margin-top: 100px;
+    padding: 30px 18px;
+    border-radius: 15px;
+    max-width: 250px;
+    /* height: 330px; */
+
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.64rem;
+    margin-bottom: 25px;
+
+  }
+
+  .card-img {
+    width: 65px;
+    min-height: 55px;
+    transition: 0.5s;
+  }
+
+  .card-img:hover {
+    transition-delay: 0.2s;
+    transition: 0.4s;
+    transform: scale(1.15);
+  }
+
+  .lien-btn {
+    background: powderblue;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: black;
+    transition: 0.3s;
+  }
+
+  .lien-btn:hover {
+    background: #2fcfff;
+  }
+
+  /* Partie des langages/connaissances */
+
+  .connaissances-h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 1.7rem;
+  }
+
+  table {
+    position: relative;
+    width: 30%;
+    margin: auto;
+    top: 120px;
+    text-align: left;
+  }
+
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  th {
+    width: 50%;
+  }
+
+  .footer {
+    background: white;
+    width: 100vw;
+    margin-top: 100px;
+    position: relative;
+  }
+
+  footer {
+    height: 140px;
+  }
+
+  .footer-a:nth-child(1) {
+    margin-left: 60px;
+  }
+
+  .footer p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: auto;
+    color: grey;
+  }
+</style>
+
+<body>
+  <a href="https://jalmih08.github.io/biographie">
+    <h1 class="nom">Ma biographie</h1>
+  </a>
+
+  <nav>
+    <!-- La partie du navbar (un peu d'inspiration prise de https://www.youtube.com/watch?v=gXkqy0b4M5g) -->
+    <ul class="nav-ul">
+      <li><a href="#fake-moi">Moi</a></li>
+      <li><a href="#fake-liens">Mes liens préférés</a></li>
+      <li><a href="#fake-connaissances">Mes connaissances</a></li>
+    </ul>
+  </nav>
+
+  <div id="fake-moi"></div> <!-- Car mon navbar est 70px d'hauteur, j'ai créé un div invisible et je l'ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va -->
+
+  <div id="moi">
+    <div class="row">
+      <img class="bio-punk" src="images/Punk7252.png" alt="">
+      <h2>Qui suis-je?</h2>
+      <p>Mon nom est John et j'ai 20 ans! Je vais à l'ecole UCLA en Californie et j'étudie le codage! J'aime aussi écouter de la musique, acheter des vêtements et m'amuser avec mes amis! J'ai attaché une image d'eux en dessous.</p>
+    </div>
+    <img class="amis" src="images/amis.png" alt="Mes amis">
+  </div>
+
+  <div id="fake-liens"></div> <!-- Car mon navbar est 70px d'hauteur, j'ai créé un div invisible et je l'ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va -->
+
+  <div id="liens">
+    <h2 class="liens-h2">Mes liens préférés</h2>
+    <div class="box">
+
+      <div class="card">
+        <a href="https://youtube.com"><img class="card-img" src="images/youtube.png" alt="YouTube"></a>
+        <h3>YouTube</h3>
+        <p>Quand je suis à la maison et que j'ai du temps libre, j'aime aller sur YouTube et regarder des vidéos sur plusieurs sujets différents comme le codage, le cuisinage, etc.</p>
+        <a class="lien-btn" href="https://youtube.com">Accédez au site</a>
+      </div>
+
+
+      <div class="card">
+        <a href="https://spotify.com"><img class="card-img" src="images/spotify.png" alt="Spotify"></a>
+        <h3>Spotify</h3>
+        <p>L'une de mes activités préférées est d'écouter de la musique. Pour seulement 10 $ par mois, je peux écouter n'importe quelle chanson sur le site de Spotify.</p>
+        <a class="lien-btn" href="https://spotify.com">Accédez au site</a>
+      </div>
+
+
+      <div class="card">
+        <a href="https://www2.hm.com/en_ca/index.html"><img class="card-img" src="images/hm.png" alt="H&M"></a>
+        <h3>H&M</h3>
+        <p>Chaque fois que j'ai besoin de nouveaux vêtements pour l'école, je vais toujours sur le site Web de H&M pour regarder leurs articles et commander ceux que j'aime.</p>
+        <a class="lien-btn" href="https://www2.hm.com/en_ca/index.html">Accédez au site</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="fake-connaissances"></div> <!-- Car mon navbar est 70px d'hauteur, j'ai créé un div invisible et je l'ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va -->
+
+  <div id="connaissances">
+
+    <h2 class="connaissances-h2">Mon niveau de compétence pour les langages de programmation</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Les langages</th>
+          <th>Niveau de compétence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Javascript</td>
+          <td>⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Java</td>
+          <td>⭐</td>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+
+    <a href="#fake-moi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="footer-arrow">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+      </svg></a>
+
+    <footer>
+      <a class="footer-a" href="https://jalmih08.github.io/">Accueil</a>
+      <a class="footer-a" href="https://jalmih08.github.io/voyage/">Mon voyage</a>
+      <a class="footer-a" href="https://jalmih08.github.io/poeme/">Mon poème</a>
+    </footer>
+    <p>© Copyright John 2021</p>
+  </div>
+
+</body>
+
+
+</html>
