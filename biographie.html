@@ -17,7 +17,7 @@
     height: 265vh;
     background: powderblue;
   }
-
+/* CSS pour la navigation commence ici*/
   nav {
     background: #343a40;
     display: flex;
@@ -64,6 +64,7 @@
     text-decoration: none;
     color: white;
   }
+  /* CSS pour la navigation termine ici*/
 
   #moi,
   #liens,
@@ -71,12 +72,11 @@
     width: 100vw;
     height: 95vh;
     margin-top: -70px;
-
   }
 
   #fake-moi,
   #fake-connaissances,
-  #fake-liens {
+  #fake-liens { /* Car mon navbar est 70px d'hauteur, j'ai créé des divs invisible et je les ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va */
     position: relative;
     bottom: 70px;
     height: 70px;
@@ -89,7 +89,6 @@
   }
 
   #connaissances {
-    background: #90ee90;
     background: #2fcfff;
     height: 70vh;
   }
@@ -97,6 +96,8 @@
   #liens {
     background: lightblue;
   }
+  
+  /* Commencement de la section avec mon image */
 
   .row {
     width: 55%;
@@ -105,12 +106,10 @@
     margin: 30px auto 0;
     left: 0;
     transform: translateX(45%);
-    /* border: 1px solid black; */
   }
 
   .bio-punk {
     background: rgba(0, 0, 0, 0.5);
-    /* border-radius: 100%; */
     border: 5px solid red;
     border-color: red orange green purple;
     transition: 0.4s;
@@ -137,7 +136,7 @@
     margin-top: 30px;
   }
 
-  /* Partie des liens préférés */
+  /* Partie des liens préférés avec les cartes blanches */
 
   .liens-h2,
   .connaissances-h2 {
@@ -147,7 +146,6 @@
     transform: translateX(-50%);
     font-size: 1.9rem;
   }
-
 
   .box {
     display: flex;
@@ -165,15 +163,12 @@
     padding: 30px 18px;
     border-radius: 15px;
     max-width: 250px;
-    /* height: 330px; */
-
   }
 
   .card p {
     font-size: 1rem;
     line-height: 1.64rem;
     margin-bottom: 25px;
-
   }
 
   .card-img {
@@ -259,6 +254,8 @@
 
   <div id="fake-moi"></div> <!-- Car mon navbar est 70px d'hauteur, j'ai créé un div invisible et je l'ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va -->
 
+  <!-- Partie de l'image de moi et la description brève -->
+  
   <div id="moi">
     <div class="row">
       <img class="bio-punk" src="images/Punk7252.png" alt="Moi">
@@ -270,6 +267,8 @@
 
   <div id="fake-liens"></div> <!-- Car mon navbar est 70px d'hauteur, j'ai créé un div invisible et je l'ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va -->
 
+  <!-- Partie des liens et cartes blanches -->
+  
   <div id="liens">
     <h2 class="liens-h2">Mes liens préférés</h2>
     <div class="box">
@@ -302,6 +301,8 @@
 
   <div id="fake-connaissances"></div> <!-- Car mon navbar est 70px d'hauteur, j'ai créé un div invisible et je l'ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va -->
 
+   <!-- Partie des connaissances des langages -->
+  
   <div id="connaissances">
 
     <h2 class="connaissances-h2">Mon niveau de compétence pour les langages de programmation</h2>
@@ -341,9 +342,11 @@
     </table>
   </div>
 
+   <!-- Partie bas avec les liens pour naviguer aux autres pages -->
+  
   <div class="footer">
 
-    <a href="#fake-moi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="footer-arrow">
+    <a href="#fake-moi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="footer-arrow"> <!-- Code pour la fleche pour retourner en haut -->
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
       </svg></a>
 
