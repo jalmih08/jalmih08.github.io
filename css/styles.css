@@ -11,11 +11,10 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   color: black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif; /* La police de caractère */
 }
 
 .main {
-  /* section */
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -46,6 +45,8 @@ body {
   border-radius: 10px;
 }
 
+/* L'image d'arriere plan */
+
 .bg-img {
   opacity: 0.7;
   position: absolute;
@@ -74,12 +75,14 @@ hr {
   border: 0;
 }
 
+/* Des proprietes pour centrer tout dans flexbox */
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Les proprietes du contenu principale */
 .flex-2 {
   position: relative;
   top: 0;
@@ -98,6 +101,7 @@ hr {
   text-align: center;
 }
 
+/* Stylage de l'image + l'animation */
 .punk {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 100%;
@@ -126,6 +130,7 @@ p {
   font-size: 1.18rem;
 }
 
+/*   Partie bas de la page avec les liens aux autres pages */
 footer {
   background: ;
   height: 250px;
@@ -149,6 +154,7 @@ footer {
   margin-right: 100px;
 }
 
+/* L'animation de la ligne rouge sur les liens en bas de page quand tu hover */
 .footer-a:before {
   position: absolute;
   bottom: -3px;
@@ -166,6 +172,8 @@ footer {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+/*   Le stylage de la fleche du bas de page (pour les pages qui en ont besoin) */
 
 .footer-arrow {
   width: 4.6vw;
