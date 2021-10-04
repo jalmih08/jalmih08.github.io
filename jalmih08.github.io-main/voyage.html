@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Un voyage parfait</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    margin: auto;
+    width: 85vw;
+    background: powderblue;
+    overflow-y: visible;
+    text-align: center;
+
+  }
+/* Arriere plan de l'avion (fait avec l'aide de https://bennettfeely.com/clippy/) */
+  .clip-path {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16%;
+    height: 16%;
+    background: #0096FF;
+    clip-path: circle(50% at 0 0);
+  }
+
+  .clip-path h1 {
+    font-size: 65px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+    animation: avion 1.3s;
+  }
+/* Animation pour que ca a l'air que l'avion vole dans la scene */
+  @keyframes avion {
+    0% {
+      left: -100px;
+      top: 100px;
+    }
+
+    100% {
+      left: 0;
+      top: 0;
+    }
+  }
+
+/*   Change la taille de l'avion sur les ecrans moins que 1800px */
+  @media screen and (max-width: 1800px) {
+    .clip-path h1 {
+      font-size: 45px;
+    }
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+/*   Proprietes des images */
+  .dubai {
+    width: 300px;
+    height: 200px;
+    margin: 0 23px 45px;
+    transition: 0.7s;
+  }
+
+
+  ul {
+    width: 200px;
+    margin: 10px auto 50px;
+    color: #0ad;
+    font-size: 21px;
+  }
+
+  ul li:hover::marker {
+    content: '🗺️';
+  }
+
+  li {
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  span {
+    color: black;
+  }
+
+  img:hover {
+    transition: 0.38s;
+    transform: scale(1.15);
+  }
+  
+/*   Partie bas de la page avec les liens aux autres pages */
+  
+  footer {
+    margin-top: 17px;
+    height: 150px;
+  }
+
+  .footer-a:nth-child(1) {
+    margin-left: 60px;
+  }
+</style>
+
+<body>
+<!--  Div pour l'avion et l'arriere plan  -->
+  <div class="clip-path" id="haut">
+    <h1>✈️</h1>
+  </div>
+  <h1>Un voyage parfait à Dubai</h1>
+  <div class="section">
+
+<!--    La partie des scenes  -->
+    
+    <div class="scenes">
+      <p>Je verrais des <b>scènes</b> comme...</p>
+      <ul>
+        <li><span><i>Des gratte-ciels</i></span></li>
+        <li><span><i>Des plages</i></span></li>
+        <li><span><em>La ville illuminée</em></span></li>
+      </ul>
+
+      <img class="dubai" src="images/burj.jpg" alt="Burj Khalifa">
+      <img class="dubai" src="images/plage.jpg" alt="Plage">
+      <img class="dubai" src="images/lumiere.jpg" alt="Dubai durant la nuit">
+
+    </div>
+
+    <!--    La partie des animaux  -->
+    
+    <div class="animaux">
+      <p>Et des <b>animaux</b> comme...</p>
+      <ul>
+        <li><span><em>Des flamants</em></span></li>
+        <li><span><em>Des poissons</em></span></li>
+        <li><span><i>Le chameau</i></span></li>
+      </ul>
+
+      <img class="dubai" src="images/flamant.jpg" alt="Flamant">
+      <img class="dubai" src="images/poisson.jpg" alt="Poissons">
+      <img class="dubai" src="images/chameau.jpg" alt="Chameau">
+    </div>
+    
+    <!--   La partie de la nourriture  -->
+
+    <div class="nourriture">
+      <p>Et je mangerais de la <strong>nourriture</strong> comme...</p>
+      <ul>
+        <li><span><i>Du samoussa</i></span></li>
+        <li><span><em>Le chebab</em></span></li>
+        <li><span><i>Ghuzi</i></span></li>
+      </ul>
+
+      <img class="dubai" src="images/samoussa.jpg" alt="Samoussa">
+      <img class="dubai" src="images/chebab.jpg" alt="Chebab">
+      <img class="dubai" src="images/ghuzi.jpg" alt="Ghuzi">
+    </div>
+
+  </div>
+  
+  <!-- Partie bas avec les liens pour naviguer aux autres pages -->
+
+  <a href="#haut"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="footer-arrow"> <!-- Code pour la fleche pour retourner en haut -->
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+    </svg></a>
+
+  <footer>
+    <a class="footer-a" href="https://jalmih08.github.io/">Accueil</a>
+    <a class="footer-a" href="https://jalmih08.github.io/biographie">Ma biographie</a>
+    <a class="footer-a" href="https://jalmih08.github.io/poeme">Mon poème</a>
+  </footer>
+
+</body>
+
+</html>
