@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+p, label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+body {
+  background: powderblue;
+}
+
+a {
+  text-decoration: none;
+  padding: 8px 18px;
+  background: #1ad;
+  border-radius: 30px;
+  color: black;
+}
+
+a:hover {
+  background: #0096c8;
+}
+
+#show {
+  margin-top: 30px;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Quiz ICS</h1>
+
+
+    <p>Quel est ton nom: </p>
+    <input type="text"> <br>
+
+    <label id="variablee">Quel est la langue des scripts qu'on a appris?</label>
+
+    <input type="radio" name="variable" value="mal"> HTML
+    <input type="radio" name="variable" value="mal"> CSS
+    <input type="radio" name="variable" value="bien"> Javascript
+    <input type="radio" name="variable" value="mal"> Java <br>
+
+    <p>Selectionne tous les langues qu'on a appris</p>
+    <input type="checkbox" name="html"> HTML
+    <input type="checkbox" name="css"> CSS
+    <input type="checkbox" name="js"> Javascript
+    <input type="checkbox" name="java"> Java
+    <input type="checkbox" name="python"> Python <br>
+
+    <p>Qu'est-ce que le "SS" dans CSS veut dire?</p>
+    <select name="" id="select">
+    <option value="">Selectionnez</option>
+    <option value="">Super Speed</option>
+    <option value="">Style Sheets</option>
+    <option value="">Stupid Selections</option>
+
+    </select> <br> <br>
+
+    <a href="#" onclick="corrige()">Soumettre tes reponses</a>
+
+    <div id="show"></div>
+
+    <script>
+      var affiche = document.getElementById("show");
+    function corrige() {
+
+     var reponse = "";
+     /* var reponseOne = document.getElementById("variablee"); */
+      var reponseOne = document.getElementsByName("variable");
+
+        if (reponseOne[2].checked) {
+       reponse = "bien";
+        } else {
+       reponse = "mal";
+        }
+
+
+     var html = document.getElementsByName("html")
+     var css = document.getElementsByName("css")
+     var js = document.getElementsByName("js")
+     var java = document.getElementsByName("java")
+     var python = document.getElementsByName("python")
+     var reponseTwo = "";
+     if (html[0].checked && css[0].checked && js[0].checked) {
+     reponseTwo = "biennn";
+     } else {
+     reponseTwo = "malll";
+     }
+
+
+    var message = ("Tu as eu " + reponse + " et " + reponseTwo);
+     affiche.innerHTML = message;
+    }
+    </script>
+  </body>
+</html>
