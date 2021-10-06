@@ -10,12 +10,17 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  overflow-x: 0;
+  overflow-y: 0;
+  background: powderblue;
+  font-family: sans-serif;
 }
 
 div {
-  width: 100vw;;
-  height: 100vh;
-  background: #1ad;
+  top: 0;
+  width: 50vw;
+  height: 80vh;
+margin: auto;
   position: relative;
 }
 h1 {
@@ -34,7 +39,7 @@ p, input {
 }
 
 p {
-  margin-right: 10px;
+  margin: 14px 100px;
 }
 
 a {
@@ -44,35 +49,45 @@ a {
   background: #1ad;
   border-radius: 30px;
   position: absolute;
-  top: 60%;
+  top: 30%;
+  z-index: 5;
 }
 .a1 {
-  left: 10px;
+  left: 90px;
 }
 .a2 {
-  left: 115px;
+  left: 197px;
 }
 .a3 {
-  left: 250px;
+  left: 340px;
 }
 
 a:hover {
   background: #0096c8;
 }
+
+#div {
+  top: 34%;
+  width: 400px;
+  margin: auto;
+}
+
     </style>
   </head>
   <body>
+<div class="script">
+  <p>Prenom: </p><input type="text" id="prenom" name="prenom"/><br>
+  <p>Nom de milieu: </p><input type="text" id="milieu" name="milieu"/><br>
+  <p>Nom de famille: </p><input type="text" id="dernier" name="dernier"/>
 
-<p>Prenom: </p><input type="text" id="prenom" name="prenom"/><br>
-<p>Nom de milieu: </p><input type="text" id="milieu" name="milieu"/><br>
-<p>Nom de famille: </p><input type="text" id="dernier" name="dernier"/>
 
+  <a class="a1" href="#" onclick="initales()">Initiales</a>
+  <a class="a2" href="#" onclick="nomcomplet()">Nom complet</a>
+  <a class="a3" href="#" onclick="utilisateur()">Nom d'utilisateur</a>
 
-<a class="a1" href="#" onclick="initales()">Initiales</a>
-<a class="a2" href="#" onclick="alert('lol')">Nom complet</a>
-<a class="a3" href="#" onclick="alert('ab')">Nom d'utilisateur</a>
+  <div id="div"></div>
+</div>
 
-<div id="div"></div>
 <script>
 
 function initales() {
@@ -87,11 +102,32 @@ var message = ("Vos initiales sont: "+prenomUp+"."+milieuUp+"."+dernierUp+".");
 affiche.innerHTML = message;
 }
 
+function nomcomplet() {
+  var affiche = document.getElementById("div");
+  var prenom = document.getElementById("prenom").value;
+  var milieu = document.getElementById("milieu").value;
+  var dernier = document.getElementById("dernier").value;
+  var prenomCo = prenom[0].toUpperCase() + prenom.slice(1);
+  var milieuCo = milieu[0].toUpperCase() + milieu.slice(1);
+  var dernierCo = dernier[0].toUpperCase() + dernier.slice(1);
+
+  var message = ("Ton nom au complet est: "+prenomCo+" "+milieuCo+" "+dernierCo)
+  affiche.innerHTML = message;
+}
+
+function utilisateur() {
+  var affiche = document.getElementById("div");
+  var prenom = document.getElementById("prenom").value;
+  var milieu = document.getElementById("milieu").value;
+  var dernier = document.getElementById("dernier").value;
+  var prenomUp = prenom.slice(0, 1).toUpperCase()
+  var milieuUp = milieu.slice(0, 1).toUpperCase()
+  var dernierUp = dernier.slice(0, 1).toUpperCase()
+  var message = ("Ton nom d'utilisateur est: "+prenomUp.toLowerCase()+milieuUp.toLowerCase()+dernier.toLowerCase())
+  affiche.innerHTML = message;
+}
 
 </script>
 
-<div class="">
-  <h1>Bien fait! Tu as éxécuté le programme!</h1>
-</div>
   </body>
 </html>
