@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>ICS3U - Tâche de codage - Fin Unité 2</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Les ordinateurs de Jeff</h1>
 
-    <p>Bienvenue au magasin qui contient tous tes besoins d'ordinateur! Ici vous pouvez trouver tous les items que vous avez besoin pour construire votre ordinateur que vous avez voulu depuis toujours.</p>
+<head>
+  <meta charset="utf-8">
+  <title>ICS3U - Tâche de codage - Fin Unité 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
+  <h1>Les ordinateurs de Jeff</h1>
 
+  <p>Bienvenue au magasin qui contient tous tes besoins d'ordinateur! Ici vous pouvez trouver tous les items que vous avez besoin pour construire votre ordinateur que vous avez voulu depuis toujours.</p>
 
-    <div class="inputdiv">
+  <div class="inputdiv">
 
-
+    <form>
       <label><input type="checkbox" id="gpu"> Carte Graphique: 379.99$ <img src="https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3080Ti-gaming/images/3080ti-vga-body.png" alt=""></label><br>
-      <label><input type="checkbox" id="cpu"> Processeur: 199.99$ <img class="cpuimg" src="https://purepng.com/public/uploads/large/purepng.com-cpu-processorelectronicscpuprocessor-941524671759bdcxz.png" alt=""></label><br>
+      <label><input type="checkbox" id="cpu"> Processeur: 199.99$ <img class="cpuimg" src="https://purepng.com/public/uploads/large/purepng.com-cpu-processorelectronicscpuprocessor-941524672626ogvtx.png" alt=""></label><br>
       <label><input type="checkbox" id="mboard"> Carte mère: 114.99$ <img src="https://cdn.mos.cms.futurecdn.net/bS6PzkzeEMZWB5nPxMiPuL.png" alt=""></label><br>
       <label><input type="checkbox" id="ram8"> Mémoire vive de 8 GO: 49.99$ <img src="https://www.corsair.com/medias/sys_master/images/images/h7a/h49/8988098330654/-CMK8GX4M1D3000C16-Gallery-VENG-LPX-BLK-01.png" alt=""></label><br>
       <label><input type="checkbox" id="ram16"> Mémoire vive de 16 GO: 92.49$ <img src="https://www.corsair.com/medias/sys_master/images/images/hc5/hd2/9420610502686/-CMW16GX4M2C3200C16-Gallery-Vengeance-RGB-Pro-01.png" alt=""></label>
+    </form>
+  </div>
 
-    </div>
-
-    <div class="taxediv">
+  <div class="taxediv">
     <h3>Dans quel province fais tu l'achète?</h2>
-      <label><input type="radio" name="province"> Ontario</label>
-      <label><input type="radio" name="province"> Québec</label>
-    </div>
+      <form>
+        <label><input type="radio" name="province"> Ontario </label>
+        <label><input type="radio" name="province"> Québec </label>
+      </form>
+  </div>
 
-    <input class="button" type="button" value="Achetez" onclick="prix()" />
-    <div id="affiche">
-    </div>
-<script src="scripts.js">
+  <input class="button" type="button" value="Achetez" onclick="prix()" />
+  <div id="affiche">
+  </div>
+  <script src="scripts.js">
 
-</script>
-  </body>
+  </script>
+</body>
+
 </html>
