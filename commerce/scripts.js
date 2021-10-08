@@ -62,6 +62,7 @@ function prix() {
 
 
   var total =  "$" + (soustotal * taxe).toFixed(2);
+  soustotal = soustotal.toFixed(2);
 
 
   var message = ("<b>REÇU</b><br>" + un + deux + trois + quatre + cinq + aucun + "<br>-------------------------------------------------------" + "<br><br> Sous-total: " + soustotal + prov + "<br> Total: " + total + aucunProvince);
