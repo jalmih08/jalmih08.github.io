@@ -52,11 +52,15 @@ function prix() {
   if (gpu.checked == false && cpu.checked == false && mboard.checked == false && ram8.checked == false && ram16.checked == false) {
     aucun = "Aucun";
   }
-
+  
+  // ligne qui prend l'information de quel province etait choisi dans l'html
   var provinceChoisi = document.getElementsByName("province")
+  // declaration des variables
   var taxe = 0;
-  var aucunProvince = "";
   var prov = "";
+  var aucunProvince = "";
+  /* if, else if et else pour changer la taxe dependant du province choisi et 
+  le message pour la province choisi ou si rien est choisi */
   if (provinceChoisi[0].checked) {
     var taxe = 1.13;
     var prov = "<br> Taxes (ON 13%): " + (soustotal * 0.13).toFixed(2);
@@ -67,11 +71,11 @@ function prix() {
     aucunProvince = " - SVP choisir une province pour la facilitation de ton achat.";
   }
 
-
+  // les calculs du sous-total et total arrondis et l'ajout des taxes au total
   var total =  "$" + (soustotal * taxe).toFixed(2);
   soustotal = soustotal.toFixed(2);
 
-
+  // declaration du variable pour le message qui affiche le recu et l'utilisation d'innerHTML pour l'afficher sur le site
   var message = ("<b>REÇU</b><br>" + messageGpu + messageCpu+ messageMboard + messageRam8 + messageRam16 + aucun + "<br>-------------------------------------------------------" + "<br><br> Sous-total: " + soustotal + prov + "<br> Total: " + total + aucunProvince);
   affiche.innerHTML = message;
 }
