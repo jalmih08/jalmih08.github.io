@@ -23,23 +23,23 @@ function prix() {
   var soustotal = 0;
 
   if (gpu.checked) {
-    un = items[0][0] + " - \t" + items[0][1] + "$<br>";
+    un = "<br>" + items[0][0] + " - \t" + items[0][1] + "$";
     soustotal = soustotal + items[0][1];
   }
   if (cpu.checked) {
-    deux = items[1][0] + " - \t" + items[1][1] + "$<br>";
+    deux = "<br>" + items[1][0] + " - \t" + items[1][1] + "$";
     soustotal = soustotal + items[1][1];
   }
   if (mboard.checked) {
-    trois = items[2][0] + " - \t" + items[2][1] + "$<br>";
+    trois = "<br>" + items[2][0] + " - \t" + items[2][1] + "$";
     soustotal = soustotal + items[2][1];
   }
   if (ram8.checked) {
-    quatre = items[3][0] + " - \t" + items[3][1] + "$<br>";
+    quatre = "<br>" + items[3][0] + " - \t" + items[3][1] + "$";
     soustotal = soustotal + items[3][1];
   }
   if (ram16.checked) {
-    cinq = items[4][0] + " - \t" + items[4][1] + "$";
+    cinq = "<br>" + items[4][0] + " - \t" + items[4][1] + "$";
     soustotal = soustotal + items[4][1];
   }
   if (gpu.checked == false && cpu.checked == false && mboard.checked == false && ram8.checked == false && ram16.checked == false) {
@@ -61,9 +61,9 @@ function prix() {
   }
 
 
-  var total = (soustotal * taxe).toFixed(2) + "$";
+  var total =  "$" + (soustotal * taxe).toFixed(2);
 
 
-  var message = ("<b>REÇU</b><br><br>" + un + deux + trois + quatre + cinq + aucun + "<br><br>-------------------------------------------------------" + "<br><br> Sous-total: " + soustotal + prov + "<br> Total: " + total + aucunProvince);
+  var message = ("<b>REÇU</b><br><br>" + un + deux + trois + quatre + cinq + aucun + "<br>-------------------------------------------------------" + "<br><br> Sous-total: " + soustotal + prov + "<br> Total: " + total + aucunProvince);
   affiche.innerHTML = message;
 }
