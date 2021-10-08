@@ -8,13 +8,16 @@
 </head>
 
 <body>
+  <!-- Section du debut avec le titre et la description -->
   <h1>Les ordinateurs de Jeff</h1>
 
   <p>Bienvenue au magasin qui contient tous tes besoins d'ordinateur! Ici vous pouvez trouver tous les items que vous avez besoin pour construire votre ordinateur que vous avez voulu depuis toujours.</p>
 
-  <div class="inputdiv">
+  <!-- div avec les choix -->
+  <div class="choixdiv">
 
     <form>
+      <!-- les 5 inputs avec le texte et les images pour les produits (tous embellis par des balises <<label>> pour que le texte et l'image sont capable a etre cliques -->
       <label><input type="checkbox" id="gpu"> Carte Graphique: 379.99$ <img src="https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX3080Ti-gaming/images/3080ti-vga-body.png" alt=""></label><br>
       <label><input type="checkbox" id="cpu"> Processeur: 199.99$ <img class="cpuimg" src="https://purepng.com/public/uploads/large/purepng.com-cpu-processorelectronicscpuprocessor-941524672626ogvtx.png" alt=""></label><br>
       <label><input type="checkbox" id="mboard"> Carte mère: 114.99$ <img src="https://cdn.mos.cms.futurecdn.net/bS6PzkzeEMZWB5nPxMiPuL.png" alt=""></label><br>
@@ -23,15 +26,19 @@
     </form>
   </div>
 
+  <!-- div du demande de province pour les taxes -->
   <div class="taxediv">
     <h3>Dans quel province fais tu l'achète?</h2>
       <form>
+        <!-- les 2 inputs type radio (pour que seulement un choix est possible et les deux embellis par des balises <<label>> pour que le texte et l'image sont capable a etre cliques -->
         <label><input type="radio" name="province"> Ontario </label>
         <label><input type="radio" name="province"> Québec </label>
       </form>
   </div>
-
+  
+  <!-- bouton pour faire l'achat qui affiche la fonction javascript qui calcule et produit un message du recu -->
   <input class="button" type="button" value="Achetez" onclick="prix()" />
+  <!-- Div qui affiche le recu une fois que le bouton est clique  -->
   <div id="affiche">
   </div>
   <script src="scripts.js">
