@@ -23,23 +23,23 @@ function prix() {
   var soustotal = 0;
 
   if (gpu.checked) {
-    un = "<br>" + items[0][0] + " - \t" + items[0][1] + "$";
+    un = "<br>" + items[0][0] + " - \t" + items[0][1];
     soustotal = soustotal + items[0][1];
   }
   if (cpu.checked) {
-    deux = "<br>" + items[1][0] + " - \t" + items[1][1] + "$";
+    deux = "<br>" + items[1][0] + " - \t" + items[1][1];
     soustotal = soustotal + items[1][1];
   }
   if (mboard.checked) {
-    trois = "<br>" + items[2][0] + " - \t" + items[2][1] + "$";
+    trois = "<br>" + items[2][0] + " - \t" + items[2][1];
     soustotal = soustotal + items[2][1];
   }
   if (ram8.checked) {
-    quatre = "<br>" + items[3][0] + " - \t" + items[3][1] + "$";
+    quatre = "<br>" + items[3][0] + " - \t" + items[3][1];
     soustotal = soustotal + items[3][1];
   }
   if (ram16.checked) {
-    cinq = "<br>" + items[4][0] + " - \t" + items[4][1] + "$";
+    cinq = "<br>" + items[4][0] + " - \t" + items[4][1];
     soustotal = soustotal + items[4][1];
   }
   if (gpu.checked == false && cpu.checked == false && mboard.checked == false && ram8.checked == false && ram16.checked == false) {
