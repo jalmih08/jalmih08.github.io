@@ -1,0 +1,338 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vh;
+  height: 545vh;
+  background: #F6CEFC;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: black;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif; /* La police de caractère */
+}
+
+.debut {
+  height: 100vh;
+}
+
+/* CSS pour la navigation commence ici*/
+  nav {
+    background: #343a40;
+    background: url("noirbg.png");
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 105vw;
+    height: 71px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+  }
+
+  .nom {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    color: white;
+    font-size: 1.8rem;
+    position: fixed;
+    z-index: 6;
+  }
+
+  .nav-ul {
+    position: absolute;
+    right: 0;
+    font-size: 19px;
+  }
+
+   .nav-ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: 0.28s;
+  }
+
+  .nav-ul li:hover {
+    /* text-decoration: underline; */
+    opacity: 1;
+    text-shadow: 0 0 4px white;
+  }
+
+  .nav-ul li a {
+    position: relative;
+  }
+
+  .nav-ul li a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.27s;
+    transform-origin: right;
+  }
+
+  .nav-ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  }
+
+  .nav-ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-ul .jouez-btn {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #5e35b1;
+    background: url('purple.png') center center !important;
+    padding: 21.5px;
+    margin-top: -1px;
+    margin-right: 0;
+    transition: 0.35s;
+  }
+
+  .nav-ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+
+.nom {
+  font-size: 2.5rem;
+  margin-top: 25px;
+}
+
+
+p {
+  text-align: center;
+  font-size: 1.18rem;
+}
+
+
+.container {
+    display: flex;
+    margin-top: 100px;
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+}
+
+.titre {
+  font-size: 38px;
+}
+
+
+.box {
+    flex: 1;
+    
+}
+
+.box1 {
+
+  text-align: center;
+
+}
+
+.jeu {
+  width: 75%;
+  margin-top: 15%;
+  box-shadow: 4px 3px 4px black;
+  border-radius: 5px;
+ 
+}
+
+.box2 {
+border: 2px solid black;
+height: 82%;
+box-shadow: 4px 3px 4px black;
+border-radius: 5px;
+}
+
+.box3 {
+
+}
+.btn-index {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  background: #E34EFD;
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin: 5px;
+  transition: 0.35s;
+}
+
+.btn-index:hover {
+  background: purple;
+}
+
+#btn:hover {
+  cursor: url(dot.png), auto;
+}
+
+#btn:active {
+  width: 260px;
+}
+
+th, tr {
+  margin: 20px;
+}
+
+#fake-ets,
+#fake-gestion,
+#fake-croquis, 
+#fake-organigramme,
+#fake-testing,
+#fake-video { /* Car mon navbar est 70px d'hauteur, j'ai créé des divs invisible et je les ai mis a -70px du vrai div pour que la navigation va exactement au endroit ou je veux qu'il va */
+    position: relative;
+    bottom: 70px;
+    height: 70px;
+    z-index: -1;
+  }
+
+.ets-section, .gestion, .croquis, .organigramme, .video, .testing, .bas {
+  margin-top: -70px;
+  width: 100vw;
+  height: 91vh;
+}
+
+.gestion {
+  height: 60vh;
+}
+
+
+table {
+  border: 5px solid black;
+  margin: auto;
+  border-collapse: collapse;
+  width: 800px;
+}
+
+td {
+  border: 1px solid black;
+}
+
+ tr, th {
+  border: 1px solid black;
+} 
+
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.ets-section, .croquis, .testing {
+  background: #eba7ff;
+}
+
+
+.bas {
+  background: white;
+  height: 30vh;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+.gestion-img {
+  position: relative;
+  margin-top: 20px;
+  width: 90%;
+  border: 4px solid black;
+  box-shadow: 5px 5px black;
+  transition: 0.4s;
+}
+
+.gestion-img:hover {
+  transform: scale(1.04);
+}
+
+video {
+  margin-top: 30px;
+  width: 720px;
+}
+
+ .footer {
+   padding: 50px 0;
+    width: 100vw;
+    position: relative;
+  }
+
+  footer {
+    height: 110px;
+    margin-top: 20px;
+  }
+
+  footer a {
+    position: relative;
+    margin: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+    color: purple;
+  }
+
+  footer a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: black;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.27s;
+    transform-origin: right;
+  }
+
+  footer a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .footer-p {
+    font-size: 22px;
+  }
+
+.footer-arrow {
+  width: 4.6vw;
+  position: absolute;
+  top: 35%;
+  left: 25px;
+  color: black;
+  transition: 0.4s;
+}
+
+.footer-arrow:hover {
+  color: purple;
+  transform: scale(1.3) rotate(360deg);
+}
+.descriptionAp{
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.notreJeu{
+  background: #d95aff;
+  width: 175px;
+  margin: auto;
+  height: 30px; 
+  border-radius: 40px;
+  color: white;
+  box-shadow: 1px 1px 1px black;
+  text-shadow: 2px 2px 2px black;
+}
+
+.embed {
+  z-index: 5;
+  width: 100%;
+}
